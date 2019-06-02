@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  context-path: /rabbitmq
+
+
+spring:
+  rabbitmq:
+    host: dev.tss.com
+    port: 5672
+    username: admin
+    password: njittss
+    # 开启发送确认
+    #publisher-confirms: true
+    # 开启发送失败退回，或者通过rabbitTemplate.setMandatory(true);设置
+    #publisher-returns: true
+
+rabbitmq:
+  test:
+    mandatory:
+      exchangeName: direct.exchange.test.mandatory
+      queueName: direct.queue.test.mandatory
+      routingKey: direct.routing-key.test.mandatory
+    ae:
+      normalExchange: direct.exchange.test.ae-normal
+      normalQueue: direct.queue.test.ae-normal
+      normalRoutingKey: direct.routing-key.test.ae-normal
+      aeExchange: fanout.exchange.test.ae
+      aeQueue: fanout.queue.test.ae
