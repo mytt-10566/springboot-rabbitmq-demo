@@ -26,3 +26,13 @@ rabbitmq:
       normalRoutingKey: direct.routing-key.test.ae-normal
       aeExchange: fanout.exchange.test.ae
       aeQueue: fanout.queue.test.ae
+    ttl:
+      msgQueueTtlExchange: direct.exchange.test.ttl.msg-queue
+      msgQueue: direct.queue.test.ttl.msg-queue
+      msgQueueRoutingKey: direct.routing-key.test.ttl.msg-queue
+      singleMsgTtlExchange: direct.exchange.test.ttl.msg-single
+      singleMsgQueue: direct.queue.test.ttl.msg-single
+      singleMsgRoutingKey: direct.routing-key.test.ttl.msg-single
+      queueTtlExchange: direct.exchange.test.ttl.queue
+      queue: direct.queue.test.ttl.queue
+      queueRoutingKey: direct.routing-key.test.ttl.queue
