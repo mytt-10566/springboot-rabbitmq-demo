@@ -1,7 +1,3 @@
 # springboot rabbitmq demo
 
-## mandatory参数
-
-## 备份交换器
-
-## TTL
+相关文档参考项目doc目录
