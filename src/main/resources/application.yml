@@ -36,3 +36,10 @@ rabbitmq:
       queueTtlExchange: direct.exchange.test.ttl.queue
       queue: direct.queue.test.ttl.queue
       queueRoutingKey: direct.routing-key.test.ttl.queue
+    dlx:
+      normalExchange: direct.exchange.test.dlx-normal
+      normalQueue: direct.queue.test.dlx-normal
+      normalRoutingKey: direct.routing-key.test.dlx-normal
+      dlxExchange: fanout.exchange.test.dlx
+      dlxQueue: fanout.queue.test.dlx
+      dlxRoutingKey: direct.routing-key.test.dlx
