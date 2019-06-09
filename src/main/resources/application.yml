@@ -43,3 +43,8 @@ rabbitmq:
       dlxExchange: direct.exchange.test.dlx
       dlxQueue: direct.queue.test.dlx
       dlxRoutingKey: direct.routing-key.test.dlx
+    priority:
+      exchange: direct.exchange.test.priority
+      queue: direct.queue.test.priority
+      routingKey: direct.routing-key.test.priority
+
