@@ -40,6 +40,6 @@ rabbitmq:
       normalExchange: direct.exchange.test.dlx-normal
       normalQueue: direct.queue.test.dlx-normal
       normalRoutingKey: direct.routing-key.test.dlx-normal
-      dlxExchange: fanout.exchange.test.dlx
-      dlxQueue: fanout.queue.test.dlx
+      dlxExchange: direct.exchange.test.dlx
+      dlxQueue: direct.queue.test.dlx
       dlxRoutingKey: direct.routing-key.test.dlx

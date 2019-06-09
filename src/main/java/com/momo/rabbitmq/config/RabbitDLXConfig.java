@@ -36,6 +36,11 @@ public class RabbitDLXConfig {
 
     @Bean
     public DirectExchange dlxNormalExchange() {
+        return new DirectExchange(normalExchangeName);
+    }
+
+    @Bean
+    public Queue dlxNormalQueue() {
         Map<String, Object> args = new HashMap<>(4);
         // 设置消息过期时间
         args.put("x-message-ttl", 5000);
@@ -43,13 +48,7 @@ public class RabbitDLXConfig {
         args.put("x-dead-letter-exchange", dlxExchangeName);
         // 为这个DLX指定路由键，不指定则使用原队列的路由键
         args.put("x-dead-letter-routing-key", dlxRoutingKey);
-        return new DirectExchange(normalExchangeName, true, false, args);
-    }
-
-    @Bean
-    public Queue dlxNormalQueue() {
-        // true 持久化
-        return new Queue(normalQueueName, true);
+        return new Queue(normalQueueName, true, false, false, args);
     }
 
     @Bean
